@@ -1,6 +1,4 @@
-/* =============================================
-   BASE STYLES (mobile-first, no media query)
-   ============================================= */
+/* BASE STYLES */
 
 html {
   scroll-behavior: smooth;
@@ -52,7 +50,7 @@ footer {
   font-family: Arial, sans-serif;
 }
 
-/* --- Mobile grid: 1 column, 10px gap --- */
+/* Mobile grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -74,9 +72,7 @@ figcaption {
   font-size: 0.95rem;
 }
 
-/* =============================================
-   TABLET VIEW — 772px and up
-   ============================================= */
+/* TABLET VIEW — 772px and up */
 @media screen and (min-width: 772px) {
 
   /* 2-column grid */
@@ -89,7 +85,6 @@ figcaption {
     border-radius: 50%;
     overflow: hidden;
     padding: 0;
-    /* text sits outside circle — bring caption back */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -105,17 +100,15 @@ figcaption {
   }
 }
 
-/* =============================================
-   LARGE SCREEN VIEW — 992px and up
-   ============================================= */
+/* LARGE SCREEN VIEW — 992px and up */
 @media screen and (min-width: 992px) {
 
-  /* 3-column grid; every third figure spans both remaining columns */
+  /* 3-column grid */
   .grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  /* Every third figure takes up 2 columns (positions 3, 6, 9 …) */
+  /* Every third figure takes up 2 columns */
   figure:nth-child(3n) {
     grid-column: span 2;
   }
@@ -127,18 +120,14 @@ figcaption {
   }
 }
 
-/* =============================================
-   REDUCED MOTION
-   ============================================= */
+/* REDUCED MOTION*/
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
   }
 }
 
-/* =============================================
-   DARK COLOR SCHEME
-   ============================================= */
+/* DARK COLOR SCHEME */
 @media (prefers-color-scheme: dark) {
   figure {
     background-color: #1e1e1e;
